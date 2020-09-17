@@ -4,7 +4,7 @@
  *main - puts
  *
  *Description: prints a line of text
- *Returns: 0
+ *Return: 0
  */
 
 int main(void)
