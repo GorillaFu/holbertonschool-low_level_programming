@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _islower - prints a to z
+ * _islower - checks if c lowercase
  *
  * Return: 0 or 1
  */
