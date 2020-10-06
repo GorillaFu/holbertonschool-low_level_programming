@@ -5,7 +5,7 @@
  * @s: string 1
  * @accept: string 2
  *
- * Return: Nothing.
+ * Return: length of prefix substring.
  */
 unsigned int _strspn(char *s, char *accept)
 {
@@ -21,8 +21,7 @@ unsigned int _strspn(char *s, char *accept)
 			if (s[i] == accept[j])
 				break;
 		}
-		
-		if (!(accept[j]))
+		if (accept[j] == 0)
 			break;
 	}
 	return (i);
