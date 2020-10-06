@@ -1,20 +1,17 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * _strchr - prints buffer in hexa
- * @s: buffer
- * @c: buffer2
+ * _strchr - finds c in string s
+ * @s: string pointer
+ * @c: char searched for
  *
- * Return: Nothing.
+ * Return: s
  */
 char *_strchr(char *s, char c)
 {
 	while (*s != c)
 	{
-		/*if s is equal to 0, increment by 1*/
-		if (!*s++)
-		{
-		}
+		*s++;
 	}
 	return (s);
 }
