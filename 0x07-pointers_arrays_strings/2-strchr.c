@@ -12,10 +12,9 @@ char *_strchr(char *s, char c)
 	int i;
 	while (s[i] != '\0')
 	{
-		/*if *s is equal to zero, increment *s */
 		if (s[i] == c)
 		{
-			return (s);
+			return (i);
 		}
 		i++;
 	}
