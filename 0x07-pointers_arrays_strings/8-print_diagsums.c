@@ -5,7 +5,7 @@
  * @a: array
  * @size: size of arrays
  *
- * Return: Nothing.
+ * Return: boid.
  */
 void print_diagsums(int *a, int size)
 {
