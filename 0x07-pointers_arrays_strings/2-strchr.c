@@ -11,7 +11,13 @@ char *_strchr(char *s, char c)
 {
 	while (*s != c)
 	{
-		*s++;
+		/*if *s is equal to zero, increment *s */
+		if(!*s++)
+		{
+			/*no clue why this works????*/
+			/*purpose of return statement mystery*/
+			return (0);
+		}
 	}
 	return (s);
 }
