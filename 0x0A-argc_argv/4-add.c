@@ -4,9 +4,9 @@
 #include <ctype.h>
 
 /**
- * main - prints buffer in hexa
- * @argc: he number of command line arguments
- * @argv: An array containing the program command line arguments.
+ * main - adds positive numbers
+ * @argc: num command line arguments
+ * @argv: array w command line arguments.
  *
  * Return: Nothing.
  */
