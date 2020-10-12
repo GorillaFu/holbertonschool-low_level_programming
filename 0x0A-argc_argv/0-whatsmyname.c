@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main - prints buffer in hexa
+ * main - prints its name followed by new line
  * @argc: number of  command line arguments
  * @argv: An array containing the line arguments.
  *
