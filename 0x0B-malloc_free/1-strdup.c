@@ -10,6 +10,7 @@
  *
  *Return: Poiner or 0 if fail
  */
+
 char *_strdup(char *str)
 {
 	int i, j;
@@ -26,7 +27,7 @@ char *_strdup(char *str)
 	string = malloc(i + 1);
 
 	for (j = 0; j < i; j++)
-        {
+	{
 		*(string + j) = *(str + j);
 	}
 	return (string);
