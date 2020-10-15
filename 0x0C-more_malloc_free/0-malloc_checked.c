@@ -16,7 +16,7 @@ void *malloc_checked(unsigned int b)
 	void *string;
 	string = malloc(b);
 
-	if (p == NULL)
+	if (string == NULL)
 	{
 		exit(98);
 	}
