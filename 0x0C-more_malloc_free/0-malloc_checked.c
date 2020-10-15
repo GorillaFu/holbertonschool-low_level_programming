@@ -13,7 +13,7 @@
 
 void *malloc_checked(unsigned int b)
 {
-	char *p = malloc(4*b);
+	char p[] = malloc(4*b);
 
 	if (p == NULL)
 	{
