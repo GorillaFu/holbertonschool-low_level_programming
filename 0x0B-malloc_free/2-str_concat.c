@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- *str *_str_concat - concatenates 2 strings
+ *_str_concat - concatenates 2 strings
  *
  *@s1: string 1
  *@s2: string 2
