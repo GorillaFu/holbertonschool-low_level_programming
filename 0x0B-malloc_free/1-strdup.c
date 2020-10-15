@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- *_strdup - functio tht returns a pointer to a newly allocated space
+ **_strdup - functio tht returns a pointer to a newly allocated space
  *in memory, containg a copy of the string given as a parameter
  *
  *@str: string
