@@ -15,9 +15,9 @@ void *malloc_checked(unsigned int b)
 {
 	char *p;
 	int castint = (int) b;
-	p = malloc(4 * b);
+	p = malloc(4 * castint);
 
-	if (p == 0)
+	if (p == NULL)
 	{
 		return (98);
 	}
