@@ -14,7 +14,7 @@
 void *malloc_checked(unsigned int b)
 {
 	char *p;
-	p = malloc(b);
+	p = malloc(4*b);
 
 	if(p == 0)
 	{
