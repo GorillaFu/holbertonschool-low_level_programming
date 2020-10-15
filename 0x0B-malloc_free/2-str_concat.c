@@ -3,9 +3,11 @@
 #include <stdlib.h>
 
 /**
- * str *_str_concat - concatenates 2 strings
+ *str *_str_concat - concatenates 2 strings
+ *
  *@s1: string 1
  *@s2: string 2
+ *
  *Return: pointer to concatenated str, or 0 if fail.
  */
 
