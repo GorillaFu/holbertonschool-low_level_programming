@@ -14,11 +14,12 @@
 void *malloc_checked(unsigned int b)
 {
 	void *string;
+
 	string = malloc(b);
 
 	if (string == NULL)
 	{
 		exit(98);
 	}
-	return(string);
+	return (string);
 }
