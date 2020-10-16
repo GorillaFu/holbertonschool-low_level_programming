@@ -3,6 +3,23 @@
 #include <stdlib.h>
 
 /**
+ * _strlen - function tht returns length of string
+ * @s: string
+ *
+ * Return: length of string
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while(s[i] != '\0')
+	{
+		i++;
+	}
+
+	return (i);
+}
+/**
  * *string_nconcat - concatenates two strings
  *
  * @s1: string 1
@@ -21,16 +38,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	size1 = 0, size2 = 0;
-	while (*(s1 + size1) != '\0')
-	{
-		size1++;
-	}
-	while (*(s2 + size2) != '\0')
-	{
-		size2++;
-	}
-	if (n < size2)
+	size1 = _strlen(s1);
+	size2 = _strlen(s2);
+	if (size2 > n)
 	{
 		size2 = n;
 	}
@@ -50,8 +60,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		*(string + i + j) = *(s2 + j);
 	}
-
 	*(string + size1 + size2 + 1) = '\0';
-
 	return (string);
 }
