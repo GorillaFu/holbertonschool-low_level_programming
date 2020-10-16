@@ -20,16 +20,13 @@ int *array_range(int min, int max)
 	}
 
 	numarray = malloc(sizeof(int) * (max - min + 1));
-
 	if (numarray == NULL)
 	{
 		return (NULL);
 	}
-
 	for(i = 0; min <= max; i++, min++)
 	{
 		*(numarray + i) = min;
 	}
-
 	return (numarray);
 }
