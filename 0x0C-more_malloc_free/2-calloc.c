@@ -11,7 +11,6 @@
  *
  * Return: pointer
  */
-
 char *forLooperPooper(char *ptr, char wrt, unsigned int size)
 {
 	unsigned int i;
@@ -22,7 +21,6 @@ char *forLooperPooper(char *ptr, char wrt, unsigned int size)
 	}
 	return (ptr);
 }
-
 /**
  * _calloc - allocates memoy for an array using malloc
  * @nmemb: number of elements
@@ -47,6 +45,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 
 	forLooperPooper(pointer, 0, nmemb * size);
-
-        return (pointer);
+	return (pointer);
 }
