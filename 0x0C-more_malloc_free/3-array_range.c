@@ -19,7 +19,7 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 
-	numarray = malloc(sizeof(int) *(max - min + 1));
+	numarray = malloc(sizeof(int) * (max - min + 1));
 
 	if (numarray == NULL)
 	{
