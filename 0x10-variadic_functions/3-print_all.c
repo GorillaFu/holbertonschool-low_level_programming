@@ -69,13 +69,7 @@ void print_all(const char * const format, ...)
 	unsigned int i, j;
 	char *separator = "";
 
-	f ops[] =
-	{
-		{"c", op_c},
-		{"i", op_i},
-		{"f", op_f},
-		{"s", op_s},
-	};
+	float ops[] ={{"c", op_c}, {"i", op_i}, {"f", op_f}, {"s", op_s}};
 
 	va_start(all, format);
 	i = 0;
