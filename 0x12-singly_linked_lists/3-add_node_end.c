@@ -8,7 +8,7 @@
  *
  * Return: Always 0.
  */
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *temp;
 	list_t *traverse;
@@ -17,14 +17,13 @@ list_t *add_node(list_t **head, const char *str)
 	temp = malloc(sizeof(list_t));
 	if (temp == NULL)
 		return (NULL);
-	temp->str = strdup(str);
 
+	temp->str = strdup(str);
 	while(str[length] != '\0')
 	{
 		length++;
 	}
 	temp->len = length;
-
 	temp->next = NULL;
 
 	if(*head == NULL)
@@ -40,6 +39,5 @@ list_t *add_node(list_t **head, const char *str)
 	}
 
 	traverse->next = temp;
-
 	return (temp);
 }
