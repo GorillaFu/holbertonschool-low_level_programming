@@ -1,43 +1,27 @@
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 #include "lists.h"
-
 /**
  * main - check the code for Holberton School students.
  *
  * Return: Always 0.
  */
-list_t *add_node_end(list_t **head, const char *str)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	list_t *temp;
-	list_t *traverse;
-	int length = 0;
+	listint_t *new = malloc(sizeof(listint_t));
+	listint_t *prev = *head;
 
-	temp = malloc(sizeof(list_t));
-	if (temp == NULL)
+	if (!new)
 		return (NULL);
-
-	temp->str = strdup(str);
-	while(str[length] != '\0')
+	new->n = n;
+	new->next = NULL;
+	if (*head == NULL)
 	{
-		length++;
+		*head = new;
+		return (*head);
 	}
-	temp->len = length;
-	temp->next = NULL;
-
-	if(*head == NULL)
-	{
-		*head = temp;
-		return (temp);
-	}
-
-	traverse = *head;
-	while(traverse->next)
-	{
-		traverse = traverse->next;
-	}
-
-	traverse->next = temp;
-	return (temp);
+	while (prev->next)
+		prev = (prev)->next;
+	prev->next = new;
+	return (new);
 }
