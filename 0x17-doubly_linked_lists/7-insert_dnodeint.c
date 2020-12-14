@@ -1,15 +1,14 @@
 #include "lists.h"
 
 /**
- * add_dnodeint_end - function that adds a new node at the end of a
- * dl list
- * @head: node
+ * insert_dnodeint_at_index: inserts node at index
+ * @h: node
+ * @idx: index
  * @n: node data
- * Return: node added
+ * Return: node or NULL if fail
  */
 
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, const int
- n)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int i = 1;
 	dlistint_t *node = NULL, *temp, *last;
