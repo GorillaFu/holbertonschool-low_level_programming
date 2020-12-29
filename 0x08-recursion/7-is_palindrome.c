@@ -1,17 +1,17 @@
 #include "holberton.h"
 
 /**
- * strlen - finds length of string recursively
+ * str_len - finds length of string recursively
  * @s: string
  *
  * Return: length of string
  */
 
-int strlen(char *s)
+int str_len(char *s)
 {
 	if (*s != '\0')
 	{
-		return (1 + strlen(s + 1));
+		return (1 + str_len(s + 1));
 	}
 	return (0);
 
@@ -50,6 +50,6 @@ int is_palindrome(char *s)
 {
 	int len;
 
-	len = strlen(s);
+	len = str_len(s);
 	return (checkPali(s, len));
 }
