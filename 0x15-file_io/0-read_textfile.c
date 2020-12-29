@@ -11,7 +11,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, return_read, return_write;
+	int fd, ret_read, ret_write;
 	char *string;
 
 	if (filename == NULL)
@@ -25,16 +25,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(string);
 		return (0);
 	}
-	return_read = read(fd, string, letters);
-	if (return_read == -1)
+	ret_read = read(fd, string, letters);
+	if (ret_read == -1)
 	{
 		free(string);
 		return (0);
 	}
-	return_write = write(STDOUT_FILENO, string, return_read);
+	ret_write = write(STDOUT_FILENO, string, ret_read);
 	close(fd);
 	free(string);
-	if (return_read == return_write)
-		return (return_write);
+	if (ret_read == ret_write)
+		return (ret_write);
 	return (0);
 }
