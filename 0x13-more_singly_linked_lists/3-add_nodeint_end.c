@@ -2,9 +2,10 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * add_nodeint_end - add node 2 end
+ * @head: head node
+ * @n: data
+ * Return: new node
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
