@@ -3,48 +3,38 @@
 #include "holberton.h"
 
 /**
- * _strlen - returns the length of the string
- * @s: string
- *
- * Return: length of string
- */
-
-int _strlen(char *s)
-{
-	int length;
-
-	while(s[length])
-		length++;
-	return (length);
-}
-
-
-/**
  * append_text_to_file - append text to a file
  * @filename: filename
  * @text_content: text to append
  * Return: -1 on failure, 1 on success
  */
-
 int append_text_to_file(const char *filename, char *text_content)
 {
-	ssize_t fd, ret_write = 0;
-	size_t len = 0;
+	int fd, wrstore, retwrite = 0;
 
-	if (!filename)
+	if (filename == NULL)
 		return (-1);
 
-	fd = open(filename, O_WRONLY | O_APPEND);
+	fd = open(filename, O_RDWR | O_APPEND);
 	if (fd == -1)
 		return (-1);
 
-	if (text_content)
-        {
-		len = _strlen(text_content);
-		ret_write = write(fd, text_content, len);
-		if (ret_write == -1)
-			return (-1);
+	while (text_content[retwrite])
+		retwrite++;
+
+	if (text_content == NULL)
+	{
+		close(fd);
+		return (1);
 	}
+	else
+	{
+		wrstore = write(fd, text_content, retwrite);
+	}
+
+	if (wrstore == -1)
+		return (-1);
+
 	close(fd);
 	return (1);
 }
