@@ -1,6 +1,7 @@
 #include "3-calc.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "function_pointers.h"
 
 /**
  * main - main function for calc
@@ -10,8 +11,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1;
-	int num2;
+	int num1, num2;
 	int (*check)(int, int);
 
 	if (argc != 4)

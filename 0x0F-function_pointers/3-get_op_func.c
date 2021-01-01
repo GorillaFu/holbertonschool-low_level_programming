@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 /**
- * get_op_func - open functions in array
- * @s: function selected
+ * get_op_func - open function
+ * @s: function char
  *
- * Return: function, or nothing
+ * Return: function or err99
  */
 
 int (*get_op_func(char *s))(int, int)
