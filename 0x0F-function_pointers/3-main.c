@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "function_pointers.h"
+#include <string.h>
 
 /**
  * main - main function for calc
