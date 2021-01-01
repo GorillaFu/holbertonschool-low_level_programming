@@ -3,16 +3,16 @@
 #include <stdio.h>
 
 /**
- * main - entry point
- * @argc: number of arguments
- * @argv: an array of arguments
+ * main - main function for calc
+ * @argc: arguemnts
+ * @argv: array of arguments
  * Return: 0
  */
 int main(int argc, char *argv[])
 {
 	int num1;
 	int num2;
-	int (*checker)(int, int);
+	int (*check)(int, int);
 
 	if (argc != 4)
 	{
@@ -26,13 +26,12 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	checker = get_op_func(argv[2]);
-	if (!checker)
+	check = get_op_func(argv[2]);
+	if (check == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
 	printf("%d\n", get_op_func(argv[2])(num1, num2));
-
 	return (0);
 }
