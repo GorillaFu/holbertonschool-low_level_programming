@@ -8,7 +8,6 @@
 
 void hash_table_print(const hash_table_t *ht)
 {
-
         unsigned int i = 0;
         int count = 0;
         char dict[1024] = "";
@@ -16,7 +15,6 @@ void hash_table_print(const hash_table_t *ht)
 
         if (!ht)
                 return;
-
         while (i < ht->size)
         {
                 if (ht->array[i] != NULL)
