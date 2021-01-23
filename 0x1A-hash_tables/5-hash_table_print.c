@@ -1,11 +1,9 @@
 #include "hash_tables.h"
-
 /**
  * hash_table_print - Print as a dictionary obj
  * @ht: Hash Table
  * Return: void
  */
-
 void hash_table_print(const hash_table_t *ht)
 {
         unsigned int i = 0;
