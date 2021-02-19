@@ -5,6 +5,10 @@ function that returns perimeter of island
 
 
 def island_perimeter(grid):
+"""
+traverses a nested list representing an island
+calculates the perimeter of the coastline
+"""
     if grid:
         perimeter = 0
         for r in range(len(grid)):
