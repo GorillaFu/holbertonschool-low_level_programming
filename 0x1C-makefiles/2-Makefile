@@ -1,0 +1,12 @@
+#storing commands and target files in variables
+CC = gcc
+SRC = main.c holberton.c
+OBJ = $(SRC:.c=.o)
+NAME = holberton
+
+#all turns my_make into executable
+all: my_make
+
+#compile and write output to new file holberton
+my_make: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
