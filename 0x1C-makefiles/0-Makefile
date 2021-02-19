@@ -1,0 +1,6 @@
+#all turns my_make into executable
+all: my_make
+
+#compile and write output to new file holberton
+my_make: main.c holberton.c
+	gcc main.c holberton.c -o holberton
