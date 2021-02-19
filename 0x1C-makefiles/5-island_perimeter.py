@@ -5,7 +5,8 @@ island perimeter method
 
 
 def island_perimeter(grid):
-    """calculates island perimeter"""
+"""calculates island perimeter"""
+
     if grid:
         perimeter = 0
         for r in range(len(grid)):
