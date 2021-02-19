@@ -1,6 +1,4 @@
 #storing commands and target files in variables
-.PHONY = all clean oclean fclean re my_make
-
 CC = gcc
 SRC = main.c holberton.c
 OBJ = $(SRC:.c=.o)
@@ -16,6 +14,7 @@ all: my_make
 clean:
 	 $(RM) -f *~ $(NAME)
 
+.PHONY: clean oclean fclean re my_make
 #delete files ending in .o (object files)
 oclean:
 	$(RM) -f  *.o
