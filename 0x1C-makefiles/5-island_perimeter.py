@@ -1,14 +1,11 @@
-#!/usr/bin/python3
+#!/bin/usr/python3
 """
-function that returns perimeter of island
+island perimeter method
 """
 
 
 def island_perimeter(grid):
-"""
-traverses a nested list representing an island
-calculates the perimeter of the coastline
-"""
+    """calculates island perimeter"""
     if grid:
         perimeter = 0
         for r in range(len(grid)):
