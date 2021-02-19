@@ -1,0 +1,28 @@
+#storing commands and target files in variables
+CC = gcc $(CFLAGS)
+SRC = main.c holberton.c
+OBJ = $(SRC:.c=.o)
+NAME = holberton
+RM = rm -f
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+#all turns my_make into executable
+all: my_make
+
+#delete files ending in ~ (tempfiles) and holberton executable
+clean:
+	 $(RM) *~ $(NAME)
+
+#delete files ending in .o (object files)
+oclean:
+	$(RM) *.o
+
+#delete object files, temp files, and executable
+fclean: oclean clean
+
+#delete object, temp, and executable files and recompile
+re: fclean all
+
+#compile and write output to new file holberton
+my_make: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
