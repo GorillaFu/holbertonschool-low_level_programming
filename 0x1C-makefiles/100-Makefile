@@ -1,10 +1,11 @@
 #storing commands and target files in variables
-CC = gcc $(CFLAGS)
+.PHONY = all clean oclean fclean re my_make
+
+CC = gcc
 SRC = main.c holberton.c
 OBJ = $(SRC:.c=.o)
 NAME = holberton
 CFLAGS = -Wall -Werror -Wextra -pedantic
-HEAD = m.h
 
 ifneq ("$(wildcard m.h)", "")
 
@@ -27,5 +28,5 @@ re: fclean all
 
 #compile and write output to new file holberton
 my_make: $(OBJ)
-	$(CC) -Wall -Werror -Wextra -pedantic $(OBJ) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 endif
